@@ -1,5 +1,5 @@
 ### Get A Domain
-##If you haven't already, get a domain :
+## If you haven't already, get a domain :
 PorkBun : https://porkbun.com/
 FreeNom : https://freenom.com/ (currently not working)
 
