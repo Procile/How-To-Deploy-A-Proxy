@@ -1,7 +1,7 @@
 # Get A Domain -
 ### If you haven't already, get a domain :
-#### PorkBun : https://porkbun.com/
-#### FreeNom : https://freenom.com/ (currently not working)
+##### PorkBun : https://porkbun.com/
+##### FreeNom : https://freenom.com/ (currently not working)
 
 ## Install Git
 If you haven't already install Git
