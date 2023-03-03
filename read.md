@@ -1,7 +1,7 @@
 <html>
 <head>
+  <h1>How To Deploy A Proxy</h1>
 </head>
 <body>
-<h1>hi</h1>
 </body>
 </html>
