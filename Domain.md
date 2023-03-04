@@ -3,8 +3,8 @@
 ##### PorkBun : https://porkbun.com/
 ##### FreeNom : https://freenom.com/ (currently not working)
 
-## Install Git
-If you haven't already install Git
+# Add It To Cloudflare -
+**for this demonstration i'm going to be using freenom**
 ```sh
 sudo apt install git
 ```
