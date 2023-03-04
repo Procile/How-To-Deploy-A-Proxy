@@ -5,7 +5,7 @@
 
 # Add It To Cloudflare -
 *for this demonstration i'm going to be using freenom*
-So first add the nameservers cloudfare gives you into your domain
+ So first add the nameservers cloudfare gives you into your domain
 ![](https://pandao.github.io/editor.md/examples/images/4.jpg)
 
 
