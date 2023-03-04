@@ -4,7 +4,7 @@
 ##### FreeNom : https://freenom.com/ (currently not working)
 
 # Add It To Cloudflare -
-**for this demonstration i'm going to be using freenom**
+*for this demonstration i'm going to be using freenom*
 ```sh
 sudo apt install git
 ```
