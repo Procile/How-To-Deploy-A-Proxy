@@ -5,8 +5,10 @@
 
 # Add It To Cloudflare -
 (for this demonstration i'm going to be using freenom)
-###### So first add the nameservers ,cloudfare gives you, into your domain
+###### So first add the nameservers that cloudfare gives you
 ![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.09.26%20PM.png)
+###### into your domain's nameservers (delete the old ones)
+![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.11.45%20PM.png)
 
 
 
