@@ -4,6 +4,7 @@
 ##### FreeNom : https://freenom.com/ (currently not working)
 
 # Add It To Cloudflare -
+(skip this step if you don't plan on adding a custom domain)
 (for this demonstration i'm going to be using freenom)
 ###### So first add the nameservers that cloudfare gives you
 ![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.09.26%20PM.png)
@@ -21,17 +22,8 @@
 ![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.31.40%20PM.png)
 ###### Wait until it finishes building
 ![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.33.19%20PM.png)
+###### Once Done it should look like this
+![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.36.59%20PM.png)
+###### (You should have recived a domain from render, if you want to add a custom one go to the next step)
 ## Installing Dependencies
-Go inside the CD :
-```sh
-cd Neb/
-```
-Install npm :
-```sh
-npm i
-```
-## Starting the Site
-See the command below:
-```sh
-$ npm start
-```
+
