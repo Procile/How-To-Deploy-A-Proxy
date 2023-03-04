@@ -10,10 +10,15 @@
 ###### into your domain's nameservers (delete the old ones)
 ![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.11.45%20PM.png)
 
-
-
-## Cloning
-Cloning ThingsWeb is as simple as running `git clone`, and then the link to the repository :
+# Deploy On Render
+###### Go to your dashboard, and make a new web service
+![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.20.38%20PM.png)
+###### Add the github proxy repo that you want to host (i'm going to use hypertabs) then press continue
+![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.26.07%20PM.png)
+###### Make sure your runtime is set to **Node**
+![]()
+######
+![]()
 ```sh
 sudo git clone https://github.com/Darkness-Organization/Neb
 ```
