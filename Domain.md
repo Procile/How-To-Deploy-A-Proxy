@@ -15,8 +15,8 @@
 ![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.20.38%20PM.png)
 ###### Add the github proxy repo that you want to host (i'm going to use hypertabs) then press continue
 ![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.26.07%20PM.png)
-###### Make sure your runtime is set to **Node**
-![]()
+###### Make sure your runtime is set to "Node" Your Build Command to "npm install" Your Start Command to "npm start"
+![](https://github.com/TheNearEnd/How-To-Deploy-A-Proxy/blob/main/images/Screenshot%202023-03-03%207.28.40%20PM.png)
 ######
 ![]()
 ```sh
