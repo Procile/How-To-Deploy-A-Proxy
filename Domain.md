@@ -5,9 +5,11 @@
 
 # Add It To Cloudflare -
 *for this demonstration i'm going to be using freenom*
-```sh
-sudo apt install git
-```
+So first add the nameservers cloudfare gives you into your domain
+![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+
+
+
 ## Cloning
 Cloning ThingsWeb is as simple as running `git clone`, and then the link to the repository :
 ```sh
