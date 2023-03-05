@@ -78,7 +78,7 @@ HTML :
 
 CSS :
 body {
-  background: radial-gradient(#010033 20%, #000 80%);
+  background: linear-gradient(45deg, #3c2653, #191a31);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -113,17 +113,17 @@ body {
   position: relative;
   width: 380px;
   height: 420px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1), 0 0 60px rgba(0, 0, 255, 0.4);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .form {
   position: absolute;
   inset: 2px;
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(122, 91, 158, 0.8);
   z-index: 10;
   padding: 50px;
   display: flex;
@@ -181,7 +181,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #0ff;
+  background: #fff;
   border-radius: 4px;
   transition: 0.5s;
   pointer-events: none;
@@ -197,5 +197,7 @@ input[type="submit"] {
   border: none;
   outline: none;
   background: rgba(255, 255, 255, 0.2);
- 
-
+  padding: 11px 25px;
+  width: 100px;
+  color: #fff;
+  font-size
