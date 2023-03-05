@@ -143,3 +143,22 @@ function createStar() {
 for (var i = 0; i < 100; i++) {
   createStar();
 }
+
+JS :
+// Get the form element and add a submit event listener to it
+const form = document.querySelector('.form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the form from submitting normally
+  const username = form.elements.username.value; // Get the username input value
+  const password = form.elements.password.value; // Get the password input value
+  // Perform your login logic here, e.g. check if the username and password are valid
+  console.log(`Username: ${username} Password: ${password}`);
+  form.reset(); // Reset the form after submission
+});
+
+// Function to display popup message when the page loads
+function popup() {
+  const popup = document.getElementById('popup');
+  popup.style.display = 'block';
+}
+
