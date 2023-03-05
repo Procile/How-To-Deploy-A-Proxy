@@ -78,12 +78,13 @@ HTML :
 
 CSS :
 body {
-  background: linear-gradient(45deg, #3c2653, #191a31);
+  background: linear-gradient(to bottom, #0d1145, #0a0e34);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Fredoka One', cursive;
+  color: #d1d1e9;
 }
 
 #popup {
@@ -123,7 +124,7 @@ body {
   position: absolute;
   inset: 2px;
   border-radius: 8px;
-  background: rgba(122, 91, 158, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 10;
   padding: 50px;
   display: flex;
@@ -131,7 +132,7 @@ body {
 }
 
 .form h2 {
-  color: #fff;
+  color: #d1d1e9;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1mm;
@@ -151,7 +152,7 @@ body {
   background: transparent;
   border: none;
   outline: none;
-  color: #fff;
+  color: #d1d1e9;
   font-size: 1em;
   letter-spacing: 0.05em;
   z-index: 10;
@@ -162,7 +163,7 @@ body {
   left: 0;
   padding: 20px 0px 10px;
   font-size: 1em;
-  color: #fff;
+  color: #d1d1e9;
   pointer-events: none;
   letter-spacing: 0.05em;
   transition: 0.5s;
@@ -181,7 +182,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: #d1d1e9;
   border-radius: 4px;
   transition: 0.5s;
   pointer-events: none;
@@ -196,8 +197,5 @@ body {
 input[type="submit"] {
   border: none;
   outline: none;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 11px 25px;
-  width: 100px;
-  color: #fff;
-  font-size
+  background: rgba(255, 255,
+
