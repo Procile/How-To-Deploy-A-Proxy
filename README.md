@@ -85,188 +85,61 @@ body {
   align-items: center;
   font-family: 'Fredoka One', cursive;
   color: #d1d1e9;
-}
-
-#popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(70, 94, 121, 0.9);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.2em;
-  letter-spacing: 0.1em;
-}
-
-#popup p {
-  margin: 0;
-}
-
-#popup a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.box {
-  position: relative;
-  width: 380px;
-  height: 420px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.form {
-  position: absolute;
-  inset: 2px;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 10;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-}
-
-.form h2 {
-  color: #d1d1e9;
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 0.1mm;
-  margin-bottom: 30px;
-}
-
-.inputBox {
-  position: relative;
-  width: 300px;
-  margin-bottom: 20px;
-}
-
-.inputBox input {
-  position: relative;
-  width: 100px;
-  padding: 20px 10px 10px;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #000000;
-  font-size: 1em;
-  letter-spacing: 0.05em;
-  z-index: 10;
-}
-
-.inputBox span {
-  position: absolute;
-  left: 0;
-  padding: 20px 0px 10px;
-  font-size: 1em;
-  color: #d1d1e9;
-  pointer-events: none;
-  letter-spacing: 0.05em;
-  transition: 0.5s;
-}
-
-.inputBox input:valid ~ span,
-.inputBox input:focus ~ span {
-  color: #969696;
-  transform: translateX(0px) translateY(-34px);
-  font-size: 0.75em;
-}
-
-.inputBox i {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: #d1d1e9;
-  border-radius: 4px;
-  transition: 0.5s;
-  pointer-events: none;
-  z-index: 9;
-}
-
-.inputBox input:valid ~ i,
-.inputBox input:focus ~ i {
-  height: 44px;
-}
-
-input[type="submit"] {
-  border: none;
-  outline: none;
-  background: #9999ad;
-  padding: 11px 25px;
-  width: 100px;
-  color: #fff;
-  font-size: 1em;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-}
-input[type="submit"]:hover{
-  background: #d1d1e9;
-}
-body {
-  background: #0a0a0a;
-  background-image: url("https://cdn.pixabay.com/photo/2020/02/23/15/00/ocean-4875542_1280.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
   overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
+  position: relative; /* added */
 }
 
-.form-container {
+#stars {
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
+  box-shadow: 0 0 2px #fff;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 40px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
 }
 
-.form-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 40px;
+/* Add the following CSS for the star animations */
+
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.form-input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+#stars:after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: twinkle 1s infinite;
 }
 
-.form-input label {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
+/* Add a container to hold multiple stars */
+#stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* make sure the stars are behind everything else */
 }
 
-.form-input input {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+/* Create a JavaScript function to add stars dynamically */
+function createStar() {
+  var star = document.createElement("div");
+  star.classList.add("star");
+  star.style.top = Math.random() * 100 + "%";
+  star.style.left = Math.random() * 100 + "%";
+  document.getElementById("stars-container").appendChild(star);
 }
 
-.form-input input:focus {
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.4);
+/* Call the createStar() function multiple times to add more stars */
+for (var i = 0; i < 100; i++) {
+  createStar();
 }
-
-.form-button {
-  display: flex;
-  justify
