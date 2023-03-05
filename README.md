@@ -147,19 +147,15 @@ for (var i = 0; i < 100; i++) {
 JS :
 <!DOCTYPE html>
 <html>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 <head>
   <title>Login</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="script.js"></script>
-  </script>
 </head>
 <body onload="popup()">
 <div class="wave"></div>
   <div class="box">
-    <div class="form" action="#">
+    <form class="form" action="#">
       <h2>Login</h2>
       <div class="inputBox">
         <input type="text" name="username" required>
@@ -171,8 +167,8 @@ JS :
         <span>Password</span>
         <i></i>
       </div>
-      <input type="submit" value="login" form="login-form">
-    </div>
+      <input type="submit" value="Login">
+    </form>
   </div>
   <div id="popup">
     <p>Join the <a href="https://discord.gg/thingsnetwork">Things Network</a> and explore the world of Unblockers!</p>
