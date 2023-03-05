@@ -44,94 +44,162 @@
 # Done
 
 HTML :
-<div class="container">
-  <form>
-    <h2>Login</h2>
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" placeholder="Enter your username">
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" placeholder="Enter your password">
-    <button type="submit">Login</button>
-  </form>
-  <div class="wave"></div>
-  <div class="light"></div>
-</div>
-
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="popup()">
+  <div class="box">
+    <div class="form" action="#">
+      <h2>Login</h2>
+      <div class="inputBox">
+        <input type="text" name="username" required>
+        <span>Username</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="password" name="password" id="password" required>
+        <span>Password</span>
+        <i></i>
+      </div>
+      <input type="submit" value="login">
+    </div>
+  </div>
+  <div id="popup">
+    <p>Join the <a href="https://discord.gg/thingsnetwork">Things Network</a> and explore the world of Unblockers!</p>
+  </div>
+</body>
+</html>
 
 CSS :
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 50px 30px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+body {
+  background: linear-gradient(-45deg, #000b42, #26004d, #000b42, #26004d);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka One', cursive;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5c00b3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#popup p {
+  margin: 0;
+}
+
+#popup a {
+  color: #fff;
+  text-decoration: underline;
+}
+.box{
   position: relative;
-  overflow: hidden;
+  width: 380px;
+  height: 420px;
+  background: #636363;
+  border-radius: 10px;
 }
-
-.wave {
+.form{
   position: absolute;
-  top: calc(100% - 5px);
+  inset: 2px;
+  border-radius: 8px;
+  background: #28292d;
+  z-index: 10;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.form h2{
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1mm;
+}
+.inputBox{
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+.inputBox input{
+  position: relative;
+  width: 100px;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+.inputBox span{
+  position: absolute;
   left: 0;
-  width: 100%;
-  height: 150px;
-  transform: translateZ(0);
-  z-index: -1;
+  padding: 20px 0px 10px;
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
 }
-
-.wave:before,
-.wave:after {
-  content: "";
-  display: block;
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+  color: #969696;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+.inputBox i{
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
   left: 0;
-  background-repeat: repeat-x;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #636363;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
 }
-
-.wave:before {
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave-top.png');
-  transform: translateZ(0);
-  animation: wave 25s linear infinite;
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i{
+  height: 44px;
 }
-
-.wave:after {
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave-bottom.png');
-  transform: translateZ(0);
-  animation: wave 12s linear infinite;
+input[type="submit"]{
+  border: none;
+  outline: none;
+  background: #636363;
+  padding: 11px 25px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
-
-@keyframes wave {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 1440px;
-  }
-}
-
-.light {
-  position: absolute;
-  top: -25px;
-  left: -25px;
-  right: -25px;
-  bottom: -25px;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 80%);
-  z-index: -2;
-  animation: flicker 3s ease-in-out infinite;
-}
-
-@keyframes flicker {
-  0% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.8;
-  }
+input[type="submit"]:active{
+  opacity: 0.8;
 }
