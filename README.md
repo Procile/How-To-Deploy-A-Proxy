@@ -43,13 +43,13 @@
 ###### You Might have to wait sometime
 # Done
 
-<!DOCTYPE html>
+<!DOCTYPE<!DOCTYPE html>
 <html>
   <head>
     <title>Login</title>
     <style>
       body {
-        background-color: #8a2be2;
+        background-color: #0a192f;
         font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
@@ -58,78 +58,62 @@
       }
       h2 {
         color: #ffffff;
+        text-align: center;
+        margin-bottom: 30px;
       }
       form {
-        background-color: #ffffff;
+        background-color: #2b2d42;
         width: 400px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 30px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px #cccccc;
-        position: relative;
-        overflow: hidden;
       }
       label {
         display: block;
-        margin-bottom: 5px;
-        color: #666666;
+        margin-bottom: 10px;
+        color: #ffffff;
+        font-size: 14px;
       }
       input[type="text"], input[type="password"] {
-        padding: 8px;
+        padding: 10px;
         width: 100%;
         border-radius: 5px;
-        border: 1px solid #cccccc;
+        border: none;
+        background-color: #1d1f2f;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+      input[type="text"]::placeholder, input[type="password"]::placeholder {
+        color: #ffffff;
       }
       input[type="submit"] {
-        background-color: #4CAF50;
-        color: #ffffff;
+        background-color: #e0e1dd;
+        color: #000000;
         padding: 10px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         width: 100%;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease-in-out;
       }
       input[type="submit"]:hover {
-        background-color: #3e8e41;
-      }
-      .wave {
-        position: absolute;
-        bottom: -10px;
-        left: 0;
-        width: 100%;
-        height: 10px;
-        background: url('https://cdn.pixabay.com/photo/2017/02/15/03/39/wave-2067576_960_720.png') repeat-x;
-        animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-        transform: translate3d(0, 0, 0);
-      }
-      @keyframes wave {
-        0% {
-          background-position-x: 0px;
-        }
-        100% {
-          background-position-x: 1360px;
-        }
-      }
-      .form-container {
-        text-align: center;
+        background-color: #ffffff;
       }
     </style>
   </head>
   <body>
-    <div id="particles-js"></div>
-    <div class="form-container">
-      <h2>Login</h2>
-      <form action="your_login_script.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Login">
-        <div class="wave"></div>
-      </form>
-    </div>
-    <script src="js/particles.min.js"></script>
-    <script>
-      particlesJS.load('particles-js', 'js/particles.json', function() {
-        console.log('particles.js loaded');
-      });
+    <h2>Login to Space Portal</h2>
+    <form action="your_login_script.php" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>
+
