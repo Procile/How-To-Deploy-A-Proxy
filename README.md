@@ -70,10 +70,13 @@ HTML :
 </html>
 
 CSS :
-body {
-  background-color: #0d0d0d;
-  color: #fff;
-  font-family: 'Helvetica Neue', sans-serif;
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .container {
@@ -83,70 +86,25 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-h1 {
-  text-align: center;
-  font-size: 48px;
-  margin-bottom: 50px;
+.container:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 70%,
+    transparent
+  );
+  z-index: -1;
+  border-radius: 10px;
+  animation: wave 2s infinite linear;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-label {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 300;
-}
-
-input[type="text"]::placeholder,
-input[type="password"]::placeholder {
-  color: #ccc;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-button[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007fff;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-button[type="submit"]:hover {
-  background-color: #005eff;
-}
-
