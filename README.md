@@ -78,62 +78,127 @@ HTML :
 
 CSS :
 body {
-  background: #0a0a0a;
-  background-image: url("https://cdn.pixabay.com/photo/2020/02/23/15/00/ocean-4875542_1280.jpg");
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  background: #141b29;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
   overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
 }
 
-.form-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 40px;
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url('https://i.imgur.com/1TsDPn3.png') repeat;
+  animation: animateStars 20s linear infinite;
+}
+
+@keyframes animateStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.box {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 60px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
-.form-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.form-input {
+.form {
+  position: absolute;
+  inset: 20px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  padding: 50px;
   display: flex;
   flex-direction: column;
+}
+
+.form h2 {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1mm;
+  margin-bottom: 30px;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
   margin-bottom: 20px;
 }
 
-.form-input label {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.form-input input {
-  padding: 10px;
-  border-radius: 5px;
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
   border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.form-input input:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
 }
 
-.form-button {
-  display: flex;
-  justify
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #969696;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+  height: 44px;
+}
+
+input[type="submit"] {
+  border: none;
+  outline: none;
+  background: #6670f0;
+  padding: 11px 25px;
+  width: 100px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor
