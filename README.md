@@ -78,124 +78,62 @@ HTML :
 
 CSS :
 body {
-  background: linear-gradient(to bottom, #0d1145, #0a0e34);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Fredoka One', cursive;
-  color: #d1d1e9;
+  background: #0a0a0a;
+  background-image: url("https://cdn.pixabay.com/photo/2020/02/23/15/00/ocean-4875542_1280.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
 }
 
-#popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(70, 94, 121, 0.9);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.2em;
-  letter-spacing: 0.1em;
-}
-
-#popup p {
-  margin: 0;
-}
-
-#popup a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.box {
-  position: relative;
-  width: 380px;
-  height: 420px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.form {
+.form-container {
   position: absolute;
-  inset: 2px;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 10;
-  padding: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-input {
   display: flex;
   flex-direction: column;
-}
-
-.form h2 {
-  color: #d1d1e9;
-  font-weight: 500;
-  text-align: center;
-  letter-spacing: 0.1mm;
-  margin-bottom: 30px;
-}
-
-.inputBox {
-  position: relative;
-  width: 300px;
   margin-bottom: 20px;
 }
 
-.inputBox input {
-  position: relative;
-  width: 100px;
-  padding: 20px 10px 10px;
-  background: transparent;
+.form-input label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.form-input input {
+  padding: 10px;
+  border-radius: 5px;
   border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.form-input input:focus {
   outline: none;
-  color: #d1d1e9;
-  font-size: 1em;
-  letter-spacing: 0.05em;
-  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-.inputBox span {
-  position: absolute;
-  left: 0;
-  padding: 20px 0px 10px;
-  font-size: 1em;
-  color: #d1d1e9;
-  pointer-events: none;
-  letter-spacing: 0.05em;
-  transition: 0.5s;
-}
-
-.inputBox input:valid ~ span,
-.inputBox input:focus ~ span {
-  color: #969696;
-  transform: translateX(0px) translateY(-34px);
-  font-size: 0.75em;
-}
-
-.inputBox i {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background: #d1d1e9;
-  border-radius: 4px;
-  transition: 0.5s;
-  pointer-events: none;
-  z-index: 9;
-}
-
-.inputBox input:valid ~ i,
-.inputBox input:focus ~ i {
-  height: 44px;
-}
-
-input[type="submit"] {
-  border: none;
-  outline: none;
-  background: rgba(255, 255,
-
+.form-button {
+  display: flex;
+  justify
