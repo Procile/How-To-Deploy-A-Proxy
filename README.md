@@ -153,10 +153,13 @@ JS :
 <head>
   <title>Login</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+  </script>
 </head>
 <body onload="popup()">
+<div class="wave"></div>
   <div class="box">
-    <form class="form" action="#">
+    <div class="form" action="#">
       <h2>Login</h2>
       <div class="inputBox">
         <input type="text" name="username" required>
@@ -169,25 +172,11 @@ JS :
         <i></i>
       </div>
       <input type="submit" value="login" form="login-form">
-    </form>
+    </div>
   </div>
   <div id="popup">
     <p>Join the <a href="https://discord.gg/thingsnetwork">Things Network</a> and explore the world of Unblockers!</p>
   </div>
-  <script>
-    const form = document.querySelector('.form');
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const username = form.elements.username.value;
-      const password = form.elements.password.value;
-      console.log(`Username: ${username} Password: ${password}`);
-      form.reset();
-    });
-
-    function popup() {
-      const popup = document.getElementById('popup');
-      popup.style.display = 'block';
-    }
-  </script>
 </body>
 </html>
+
