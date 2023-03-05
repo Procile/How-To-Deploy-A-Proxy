@@ -78,26 +78,12 @@ HTML :
 
 CSS :
 body {
-  background: linear-gradient(-45deg, #000b42, #26004d, #000b42, #26004d);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background: radial-gradient(#010033 20%, #000 80%);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Fredoka One', cursive;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 #popup {
@@ -106,10 +92,12 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #5c00b3;
+  background-color: rgba(70, 94, 121, 0.9);
   color: #fff;
   padding: 20px;
   text-align: center;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
 }
 
 #popup p {
@@ -125,17 +113,17 @@ body {
   position: relative;
   width: 380px;
   height: 420px;
-  background: #636363;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .form {
   position: absolute;
   inset: 2px;
   border-radius: 8px;
-  background: #28292d;
+  background: rgba(0, 0, 0, 0.6);
   z-index: 10;
   padding: 50px;
   display: flex;
@@ -147,17 +135,18 @@ body {
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1mm;
+  margin-bottom: 30px;
 }
 
 .inputBox {
   position: relative;
-  width: 100%;
-  margin-top: 35px;
+  width: 300px;
+  margin-bottom: 20px;
 }
 
 .inputBox input {
   position: relative;
-  width: 100%;
+  width: 100px;
   padding: 20px 10px 10px;
   background: transparent;
   border: none;
@@ -192,7 +181,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #636363;
+  background: #fff;
   border-radius: 4px;
   transition: 0.5s;
   pointer-events: none;
@@ -207,8 +196,6 @@ body {
 input[type="submit"] {
   border: none;
   outline: none;
-  background: #636363;
+  background: rgba(255, 255, 255, 0.2);
   padding: 11px 25px;
-  width: 100%;
-  margin-top: 30px;
-  border-radius: 4px
+  width: 100px;
