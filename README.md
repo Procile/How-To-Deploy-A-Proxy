@@ -44,41 +44,21 @@
 # Done
 
 HTML :
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Space Login Form</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Space Login</h1>
-    <form>
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-      </div>
-      <button type="submit">Login</button>
-    </form>
-  </div>
-</body>
-</html>
+<div class="container">
+  <form>
+    <h2>Login</h2>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+    <button type="submit">Login</button>
+  </form>
+  <div class="wave"></div>
+  <div class="light"></div>
+</div>
+
 
 CSS :
-@keyframes wave {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -87,24 +67,71 @@ CSS :
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
+  overflow: hidden;
 }
 
-.container:before {
-  content: '';
+.wave {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(255, 255, 255, 0.1) 30%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0.1) 70%,
-    transparent
-  );
+  top: calc(100% - 5px);
+  left: 0;
+  width: 100%;
+  height: 150px;
+  transform: translateZ(0);
   z-index: -1;
-  border-radius: 10px;
-  animation: wave 2s infinite linear;
+}
+
+.wave:before,
+.wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: repeat-x;
+}
+
+.wave:before {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave-top.png');
+  transform: translateZ(0);
+  animation: wave 25s linear infinite;
+}
+
+.wave:after {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave-bottom.png');
+  transform: translateZ(0);
+  animation: wave 12s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1440px;
+  }
+}
+
+.light {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  right: -25px;
+  bottom: -25px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 80%);
+  z-index: -2;
+  animation: flicker 3s ease-in-out infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }
