@@ -45,16 +45,21 @@
 
 HTML :
 <!DOCTYPE html>
+<html<!DOCTYPE html>
 <html>
   <head>
     <title>Login</title>
     <style>
       body {
-        background-color: #f2f2f2;
+        background-color: #8a2be2;
         font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
       h2 {
-        color: #333333;
+        color: #ffffff;
         text-align: center;
       }
       form {
@@ -122,10 +127,6 @@ HTML :
     </form>
   </body>
 </html>
-
-
-CSS :
-
 
 
 
