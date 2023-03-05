@@ -78,38 +78,42 @@ HTML :
 
 CSS :
 body {
-  background: #141b29;
+  background: linear-gradient(to bottom, #0d1145, #0a0e34);
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka One', cursive;
+  color: #d1d1e9;
 }
 
-.stars {
+#popup {
+  display: none;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: url('https://i.imgur.com/1TsDPn3.png') repeat;
-  animation: animateStars 20s linear infinite;
+  background-color: rgba(70, 94, 121, 0.9);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
 }
 
-@keyframes animateStars {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
+#popup p {
+  margin: 0;
+}
+
+#popup a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .box {
   position: relative;
-  width: 400px;
-  height: 500px;
-  margin: 0 auto;
-  margin-top: 60px;
+  width: 380px;
+  height: 420px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -118,9 +122,9 @@ body {
 
 .form {
   position: absolute;
-  inset: 20px;
+  inset: 2px;
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 10;
   padding: 50px;
   display: flex;
@@ -128,7 +132,7 @@ body {
 }
 
 .form h2 {
-  color: #fff;
+  color: #d1d1e9;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1mm;
@@ -137,18 +141,18 @@ body {
 
 .inputBox {
   position: relative;
-  width: 100%;
+  width: 300px;
   margin-bottom: 20px;
 }
 
 .inputBox input {
   position: relative;
-  width: 100%;
+  width: 100px;
   padding: 20px 10px 10px;
   background: transparent;
   border: none;
   outline: none;
-  color: #fff;
+  color: #000000;
   font-size: 1em;
   letter-spacing: 0.05em;
   z-index: 10;
@@ -159,7 +163,7 @@ body {
   left: 0;
   padding: 20px 0px 10px;
   font-size: 1em;
-  color: #fff;
+  color: #d1d1e9;
   pointer-events: none;
   letter-spacing: 0.05em;
   transition: 0.5s;
@@ -178,7 +182,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #fff;
+  background: #d1d1e9;
   border-radius: 4px;
   transition: 0.5s;
   pointer-events: none;
@@ -193,12 +197,77 @@ body {
 input[type="submit"] {
   border: none;
   outline: none;
-  background: #6670f0;
+  background: #9999ad;
   padding: 11px 25px;
   width: 100px;
   color: #fff;
   font-size: 1em;
-  font-weight: 500;
-  border-radius: 25px;
-  margin-top: 20px;
-  cursor
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+input[type="submit"]:hover{
+  background: #d1d1e9;
+}
+body {
+  background: #0a0a0a;
+  background-image: url("https://cdn.pixabay.com/photo/2020/02/23/15/00/ocean-4875542_1280.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-input label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.form-input input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.form-input input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.form-button {
+  display: flex;
+  justify
+
