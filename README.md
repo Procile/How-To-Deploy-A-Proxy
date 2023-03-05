@@ -62,28 +62,24 @@ form {
   width: 400px;
   margin: 0 auto;
   padding: 30px;
-  background: #00171f;
+  background-color: #00171f;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   border-radius: 10px;
-  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
-  transform: translateY(-20px);
-  transition: all 0.3s ease-in-out;
-}
-
-form:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 40px;
+  font-weight: 300;
   margin-bottom: 30px;
+  letter-spacing: 2px;
 }
 
 .form-group {
   position: relative;
+  margin-bottom: 20px;
 }
 
 label {
@@ -96,35 +92,35 @@ label {
 
 input[type="text"], input[type="password"] {
   width: 100%;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 20px;
   border: none;
-  background: #3c4d5a;
+  border-radius: 5px;
+  background-color: #0d2c3e;
   color: #fff;
   font-size: 16px;
   font-weight: 300;
-  box-shadow: none;
 }
 
 input[type="text"]:focus, input[type="password"]:focus {
   outline: none;
-  box-shadow: none;
+  box-shadow: 0px 0px 5px #00bcd4;
 }
 
 button[type="submit"] {
   display: block;
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 12px;
   border: none;
-  background: #3ca8c8;
+  border-radius: 5px;
+  background-color: #00bcd4;
   color: #fff;
   font-size: 16px;
   font-weight: 600;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
 
 button[type="submit"]:hover {
-  background: #31859b;
+  background-color: #0097a7;
 }
