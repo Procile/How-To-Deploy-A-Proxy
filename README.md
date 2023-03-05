@@ -78,52 +78,25 @@ HTML :
 
 CSS :
 body {
-  background: radial-gradient(#010033 20%, #000 80%);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #030303;
   font-family: 'Fredoka One', cursive;
-}
-
-#popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(70, 94, 121, 0.9);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  font-size: 1.2em;
-  letter-spacing: 0.1em;
-}
-
-#popup p {
-  margin: 0;
-}
-
-#popup a {
-  color: #fff;
-  text-decoration: underline;
+  overflow: hidden;
 }
 
 .box {
   position: relative;
   width: 380px;
   height: 420px;
-  background: rgba(255, 255, 255, 0.1);
+  margin: 50px auto;
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .form {
   position: absolute;
   inset: 2px;
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
   padding: 50px;
   display: flex;
@@ -135,18 +108,17 @@ body {
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1mm;
-  margin-bottom: 30px;
 }
 
 .inputBox {
   position: relative;
   width: 300px;
-  margin-bottom: 20px;
+  margin-top: 35px;
 }
 
 .inputBox input {
   position: relative;
-  width: 100px;
+  width: 100%;
   padding: 20px 10px 10px;
   background: transparent;
   border: none;
@@ -196,6 +168,24 @@ body {
 input[type="submit"] {
   border: none;
   outline: none;
-  background: rgba(255, 255, 255, 0.2);
+  background: #fff;
+  color: #000;
   padding: 11px 25px;
   width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:active {
+  opacity: 0.8;
+}
+
+#particles-js {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
