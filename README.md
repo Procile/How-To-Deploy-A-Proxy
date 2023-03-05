@@ -81,23 +81,25 @@ body {
   background: linear-gradient(-45deg, #000b42, #26004d, #000b42, #26004d);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-	height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Fredoka One', cursive;
 }
+
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
 #popup {
   display: none;
   position: fixed;
@@ -118,14 +120,18 @@ body {
   color: #fff;
   text-decoration: underline;
 }
-.box{
+
+.box {
   position: relative;
   width: 380px;
   height: 420px;
   background: #636363;
   border-radius: 10px;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
-.form{
+
+.form {
   position: absolute;
   inset: 2px;
   border-radius: 8px;
@@ -135,20 +141,23 @@ body {
   display: flex;
   flex-direction: column;
 }
-.form h2{
+
+.form h2 {
   color: #fff;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1mm;
 }
-.inputBox{
+
+.inputBox {
   position: relative;
-  width: 300px;
+  width: 100%;
   margin-top: 35px;
 }
-.inputBox input{
+
+.inputBox input {
   position: relative;
-  width: 100px;
+  width: 100%;
   padding: 20px 10px 10px;
   background: transparent;
   border: none;
@@ -158,7 +167,8 @@ body {
   letter-spacing: 0.05em;
   z-index: 10;
 }
-.inputBox span{
+
+.inputBox span {
   position: absolute;
   left: 0;
   padding: 20px 0px 10px;
@@ -168,13 +178,15 @@ body {
   letter-spacing: 0.05em;
   transition: 0.5s;
 }
+
 .inputBox input:valid ~ span,
-.inputBox input:focus ~ span{
+.inputBox input:focus ~ span {
   color: #969696;
   transform: translateX(0px) translateY(-34px);
   font-size: 0.75em;
 }
-.inputBox i{
+
+.inputBox i {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -186,20 +198,17 @@ body {
   pointer-events: none;
   z-index: 9;
 }
+
 .inputBox input:valid ~ i,
-.inputBox input:focus ~ i{
+.inputBox input:focus ~ i {
   height: 44px;
 }
-input[type="submit"]{
+
+input[type="submit"] {
   border: none;
   outline: none;
   background: #636363;
   padding: 11px 25px;
-  width: 100px;
-  margin-top: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-input[type="submit"]:active{
-  opacity: 0.8;
-}
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 4px
