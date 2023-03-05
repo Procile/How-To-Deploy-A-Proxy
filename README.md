@@ -99,6 +99,10 @@ input[type="text"], input[type="password"] {
   color: #fff;
   font-size: 16px;
   font-weight: 300;
+  ::placeholder {
+    color: #bbb;
+    font-size: 14px;
+  }
 }
 
 input[type="text"]:focus, input[type="password"]:focus {
