@@ -101,16 +101,15 @@ body {
 }
 
 #popup {
+  display: none;
   position: fixed;
-  bottom: -200px;
+  bottom: 0;
   left: 0;
   width: 100%;
   background-color: #5c00b3;
   color: #fff;
   padding: 20px;
   text-align: center;
-  transition: all 0.5s ease;
-  z-index: 999;
 }
 
 #popup p {
@@ -128,6 +127,7 @@ body {
   height: 420px;
   background: #636363;
   border-radius: 10px;
+  box-shadow: 0px 0px 15px #0099ff;
 }
 
 .form {
@@ -146,6 +146,7 @@ body {
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1mm;
+  text-shadow: 0px 0px 10px #0099ff;
 }
 
 .inputBox {
@@ -178,8 +179,8 @@ body {
   transition: 0.5s;
 }
 
-.inputBox input:valid ~ span,
-.inputBox input:focus ~ span {
+.inputBox input:valid~span,
+.inputBox input:focus~span {
   color: #969696;
   transform: translateX(0px) translateY(-34px);
   font-size: 0.75em;
@@ -198,8 +199,8 @@ body {
   z-index: 9;
 }
 
-.inputBox input:valid ~ i,
-.inputBox input:focus ~ i {
+.inputBox input:valid~i,
+.inputBox input:focus~i {
   height: 44px;
 }
 
@@ -208,8 +209,4 @@ input[type="submit"] {
   outline: none;
   background: #636363;
   padding: 11px 25px;
-  width: 100px;
-  margin-top: 10px;
-  border-radius: 4px;
  
-
