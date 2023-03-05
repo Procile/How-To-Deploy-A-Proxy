@@ -44,81 +44,102 @@
 # Done
 
 HTML :
-<form>
-  <h1>Space Login</h1>
-  <div class="form-group">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" placeholder="Enter your username">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Space Login Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Space Login</h1>
+    <form>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" placeholder="Enter your password">
-  </div>
-  <button type="submit">Login</button>
-</form>
+</body>
+</html>
 
 CSS :
-form {
-  width: 400px;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: #00171f;
+body {
+  background-color: #0d0d0d;
   color: #fff;
   font-family: 'Helvetica Neue', sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
   text-align: center;
-  font-size: 40px;
-  font-weight: 300;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-group {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 20px;
 }
 
 label {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 20px;
-  font-size: 20px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-input[type="text"], input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #0d2c3e;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  ::placeholder {
-    color: #bbb;
-    font-size: 14px;
-  }
-}
-
-input[type="text"]:focus, input[type="password"]:focus {
-  outline: none;
-  box-shadow: 0px 0px 5px #00bcd4;
-}
-
-button[type="submit"] {
-  display: block;
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 12px;
   border: none;
   border-radius: 5px;
-  background-color: #00bcd4;
+  background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #ccc;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007fff;
+  color: #fff;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
@@ -126,5 +147,6 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0097a7;
+  background-color: #005eff;
 }
+
