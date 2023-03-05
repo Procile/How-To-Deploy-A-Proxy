@@ -43,77 +43,88 @@
 ###### You Might have to wait sometime
 # Done
 
-<!DOCTYPE<!DOCTYPE html>
-<html>
-  <head>
-    <title>Login</title>
-    <style>
-      body {
-        background-color: #0a192f;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      h2 {
-        color: #ffffff;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      form {
-        background-color: #2b2d42;
-        width: 400px;
-        margin: 0 auto;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px #cccccc;
-      }
-      label {
-        display: block;
-        margin-bottom: 10px;
-        color: #ffffff;
-        font-size: 14px;
-      }
-      input[type="text"], input[type="password"] {
-        padding: 10px;
-        width: 100%;
-        border-radius: 5px;
-        border: none;
-        background-color: #1d1f2f;
-        color: #ffffff;
-        margin-bottom: 20px;
-      }
-      input[type="text"]::placeholder, input[type="password"]::placeholder {
-        color: #ffffff;
-      }
-      input[type="submit"] {
-        background-color: #e0e1dd;
-        color: #000000;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        width: 100%;
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        transition: background-color 0.3s ease-in-out;
-      }
-      input[type="submit"]:hover {
-        background-color: #ffffff;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Login to Space Portal</h2>
-    <form action="your_login_script.php" method="post">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" placeholder="Enter your username" required>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password" required>
-      <input type="submit" value="Login">
-    </form>
-  </body>
-</html>
+HTML :
+<form>
+  <h1>Space Login</h1>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+  </div>
+  <button type="submit">Login</button>
+</form>
 
+CSS :
+form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #00171f;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
+  transform: translateY(-20px);
+  transition: all 0.3s ease-in-out;
+}
+
+form:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  font-size: 20px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background: #3c4d5a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  box-shadow: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #3ca8c8;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background: #31859b;
+}
