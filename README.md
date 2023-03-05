@@ -43,6 +43,89 @@
 ###### You Might have to wait sometime
 # Done
 
+HTML :
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      h2 {
+        color: #333333;
+        text-align: center;
+      }
+      form {
+        background-color: #ffffff;
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #cccccc;
+        position: relative;
+        overflow: hidden;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666666;
+      }
+      input[type="text"], input[type="password"] {
+        padding: 8px;
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #ffffff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .wave {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: url('https://cdn.pixabay.com/photo/2017/02/15/03/39/wave-2067576_960_720.png') repeat-x;
+        animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+        transform: translate3d(0, 0, 0);
+      }
+      @keyframes wave {
+        0% {
+          background-position-x: 0px;
+        }
+        100% {
+          background-position-x: 1360px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Login</h2>
+    <form action="your_login_script.php" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <input type="submit" value="Login">
+      <div class="wave"></div>
+    </form>
+  </body>
+</html>
+
+
+CSS :
+
 
 
 
