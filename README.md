@@ -81,7 +81,7 @@ body {
   background: linear-gradient(-45deg, #000b42, #26004d, #000b42, #26004d);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 100vh;
+	height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,15 +89,15 @@ body {
 }
 
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #popup {
@@ -121,72 +121,73 @@ body {
   text-decoration: underline;
 }
 
-.box {
+.box{
   position: relative;
-  width: 380px;
-  height: 420px;
-  background: #636363;
+  width: 400px;
+  height: auto;
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px #0099ff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-.form {
-  position: absolute;
-  inset: 2px;
-  border-radius: 8px;
-  background: #28292d;
-  z-index: 10;
+.form{
+  width: 100%;
   padding: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.form h2 {
+.form h2{
   color: #fff;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1mm;
-  text-shadow: 0px 0px 10px #0099ff;
+  margin-bottom: 50px;
 }
 
-.inputBox {
+.inputBox{
   position: relative;
-  width: 300px;
-  margin-top: 35px;
+  width: 100%;
+  margin-bottom: 25px;
 }
 
-.inputBox input {
+.inputBox input{
   position: relative;
-  width: 100px;
-  padding: 20px 10px 10px;
+  width: 100%;
+  padding: 10px;
   background: transparent;
   border: none;
   outline: none;
   color: #fff;
   font-size: 1em;
   letter-spacing: 0.05em;
-  z-index: 10;
 }
 
-.inputBox span {
+.inputBox span{
   position: absolute;
   left: 0;
-  padding: 20px 0px 10px;
+  padding: 10px 0px 10px 10px;
   font-size: 1em;
   color: #fff;
   pointer-events: none;
   letter-spacing: 0.05em;
   transition: 0.5s;
+  transform: translateY(-50%);
+  background-color: #002b80;
+  border-radius: 5px;
 }
 
-.inputBox input:valid~span,
-.inputBox input:focus~span {
-  color: #969696;
-  transform: translateX(0px) translateY(-34px);
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+  color: #fff;
+  transform: translateX(0px) translateY(-120%);
   font-size: 0.75em;
 }
 
-.inputBox i {
+.inputBox i{
   position: absolute;
   left: 0;
   bottom: 0;
@@ -196,17 +197,18 @@ body {
   border-radius: 4px;
   transition: 0.5s;
   pointer-events: none;
-  z-index: 9;
 }
 
-.inputBox input:valid~i,
-.inputBox input:focus~i {
-  height: 44px;
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i{
+  height: 100%;
+  background-color: #00ffff;
 }
 
-input[type="submit"] {
+input[type="submit"]{
   border: none;
   outline: none;
-  background: #636363;
-  padding: 11px 25px;
- 
+  background: #00ffff;
+  padding: 10px 25px;
+  width: 100%;
+  margin-top: 25
