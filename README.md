@@ -43,9 +43,7 @@
 ###### You Might have to wait sometime
 # Done
 
-HTML :
 <!DOCTYPE html>
-<html<!DOCTYPE html>
 <html>
   <head>
     <title>Login</title>
@@ -60,7 +58,6 @@ HTML :
       }
       h2 {
         color: #ffffff;
-        text-align: center;
       }
       form {
         background-color: #ffffff;
@@ -113,20 +110,26 @@ HTML :
           background-position-x: 1360px;
         }
       }
+      .form-container {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-    <h2>Login</h2>
-    <form action="your_login_script.php" method="post">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required><br><br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required><br><br>
-      <input type="submit" value="Login">
-      <div class="wave"></div>
-    </form>
-  </body>
-</html>
-
-
-
+    <div id="particles-js"></div>
+    <div class="form-container">
+      <h2>Login</h2>
+      <form action="your_login_script.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
+        <div class="wave"></div>
+      </form>
+    </div>
+    <script src="js/particles.min.js"></script>
+    <script>
+      particlesJS.load('particles-js', 'js/particles.json', function() {
+        console.log('particles.js loaded');
+      });
