@@ -145,20 +145,49 @@ for (var i = 0; i < 100; i++) {
 }
 
 JS :
-// Get the form element and add a submit event listener to it
-const form = document.querySelector('.form');
-form.addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent the form from submitting normally
-  const username = form.elements.username.value; // Get the username input value
-  const password = form.elements.password.value; // Get the password input value
-  // Perform your login logic here, e.g. check if the username and password are valid
-  console.log(`Username: ${username} Password: ${password}`);
-  form.reset(); // Reset the form after submission
-});
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="popup()">
+  <div class="box">
+    <form class="form" action="#">
+      <h2>Login</h2>
+      <div class="inputBox">
+        <input type="text" name="username" required>
+        <span>Username</span>
+        <i></i>
+      </div>
+      <div class="inputBox">
+        <input type="password" name="password" id="password" required>
+        <span>Password</span>
+        <i></i>
+      </div>
+      <input type="submit" value="login" form="login-form">
+    </form>
+  </div>
+  <div id="popup">
+    <p>Join the <a href="https://discord.gg/thingsnetwork">Things Network</a> and explore the world of Unblockers!</p>
+  </div>
+  <script>
+    const form = document.querySelector('.form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const username = form.elements.username.value;
+      const password = form.elements.password.value;
+      console.log(`Username: ${username} Password: ${password}`);
+      form.reset();
+    });
 
-// Function to display popup message when the page loads
-function popup() {
-  const popup = document.getElementById('popup');
-  popup.style.display = 'block';
-}
-
+    function popup() {
+      const popup = document.getElementById('popup');
+      popup.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
